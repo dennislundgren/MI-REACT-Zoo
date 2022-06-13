@@ -1,12 +1,22 @@
-import React from "react";
+import { Provider } from "react-redux";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { HelloWorld } from "./components/HelloWorld";
+import { ShowAnimal } from "./components/ShowAnimal";
+import { ShowAnimals } from "./components/ShowAnimals";
+import Store from "./redux/Store";
 
 function App() {
   return (
-    <div className="App">
-      <HelloWorld></HelloWorld>
-    </div>
+    <>
+      <Provider store={Store}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<ShowAnimals />} />
+            <Route path="/:id" element={<ShowAnimal />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
+    </>
   );
 }
 
