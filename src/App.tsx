@@ -1,12 +1,14 @@
 import React from "react";
 import "./App.css";
+import GlobalStyles from "./styles/GlobalStyles";
 import { HelloWorld } from "./components/HelloWorld";
 
 function App() {
   return (
-    <div className="App">
+    <>
+      <GlobalStyles></GlobalStyles>
       <HelloWorld></HelloWorld>
-    </div>
+    </>
   );
 }
 

@@ -1,11 +1,7 @@
 import styled from "styled-components";
 
-////////////////
-// VARIABLES //
-//////////////
-
 const Block = styled.div`
-  background-color: orange;
+  background-color: ${({ color }) => color || "var(--primary-color)"};
   width: 10px;
   height: 100px;
   color: ${({ color }) => color || ""};
