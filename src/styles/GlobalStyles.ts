@@ -94,11 +94,6 @@ h6 {
   }
 }
 `;
-const variables = `
-    :root {
-        --primary-color: green;
-    }
-`;
 const themes = `
 :root {
     --bg: white;
@@ -131,6 +126,6 @@ const themes = `
   }
 `;
 
-const GlobalStyles = createGlobalStyle`${reset + variables + themes}`;
+const GlobalStyles = createGlobalStyle`${reset + themes}`;
 
 export default GlobalStyles;
